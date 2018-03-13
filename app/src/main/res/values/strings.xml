@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Quiz App</string>
+    <string name="question_1">1. Which company does not produce mobile phones?</string>
+    <string name="answer_1_1">Samsung</string>
+    <string name="answer_1_2">Epson</string>
+    <string name="answer_1_3">Xiaomi</string>
+    <string name="answer_1_4">Asus</string>
+
+    <string name="question_2">2. Choose two most popular systems for phones today.</string>
+    <string name="answer_2_1">Windows Phone</string>
+    <string name="answer_2_2">Android</string>
+    <string name="answer_2_3">iOS</string>
+    <string name="answer_2_4">Symbian</string>
+
+    <string name="question_3">3. What is the name latest version of Android?</string>
+
+    <string name="question_4">4. Which model was not produced by the company LG?</string>
+    <string name="answer_4_1">Mi5</string>
+    <string name="answer_4_2">V30</string>
+    <string name="answer_4_3">Q6</string>
+    <string name="answer_4_4">G2</string>
+
+    <string name="btn_send">Send</string>
+    <string name="btn_reset">Reset</string>
+    <string name="edit_text_hint">Your answer</string>
+
+    <string name="you_win">All your answers are correct. Congratulations!!!</string>
+    <string name="result">Your result: %1$d/4. Try again."</string>
+</resources>

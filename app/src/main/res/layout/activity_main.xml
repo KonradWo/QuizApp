@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg"
+    tools:context="com.example.user.quizapp.MainActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true">
+
+        <TextView
+            android:id="@+id/text_question1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/shape_question"
+            android:padding="@dimen/question_padding"
+            android:text="@string/question_1"
+            android:textAppearance="@style/Question"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/radio_group_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/shape_answers"
+            android:padding="@dimen/answers_padding"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_question1">
+
+            <RadioButton
+                android:id="@+id/radio_button_answer1_1"
+                android:layout_width="236dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/answer_1_1" />
+
+            <RadioButton
+                android:id="@+id/radio_button_answer1_2"
+                android:layout_width="232dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/answer_1_2" />
+
+            <RadioButton
+                android:id="@+id/radio_button_answer1_3"
+                android:layout_width="226dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/answer_1_3" />
+
+            <RadioButton
+                android:id="@+id/radio_button_answer1_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/answer_1_4" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/text_question2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/shape_question"
+            android:padding="@dimen/question_padding"
+            android:text="@string/question_2"
+            android:textAppearance="@style/Question"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radio_group_1" />
+
+        <RadioGroup
+            android:id="@+id/radio_group_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/shape_answers"
+            android:padding="@dimen/answers_padding"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_question2">
+
+            <CheckBox
+                android:id="@+id/checkbox_answer2_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/answer_2_1"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="353dp" />
+
+            <CheckBox
+                android:id="@+id/checkbox_answer2_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/answer_2_2" />
+
+            <CheckBox
+                android:id="@+id/checkbox_answer2_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/answer_2_3" />
+
+            <CheckBox
+                android:id="@+id/checkbox_answer2_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/answer_2_4" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/text_question3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/shape_question"
+            android:padding="@dimen/question_padding"
+            android:text="@string/question_3"
+            android:textAppearance="@style/Question"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radio_group_2" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/shape_answers"
+            android:orientation="vertical"
+            android:padding="@dimen/answers_padding"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_question3">
+
+            <EditText
+                android:id="@+id/edit_text_answer3"
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:ems="10"
+                android:hint="@string/edit_text_hint"
+                android:inputType="text"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="416dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_question4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/shape_question"
+            android:padding="@dimen/question_padding"
+            android:text="@string/question_4"
+            android:textAppearance="@style/Question"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+        <RadioGroup
+            android:id="@+id/radio_group_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/shape_answers"
+            android:padding="@dimen/answers_padding"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_question4">
+
+            <RadioButton
+                android:id="@+id/radio_button_answer4_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/answer_4_1" />
+
+            <RadioButton
+                android:id="@+id/radio_button_answer4_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/answer_4_2" />
+
+            <RadioButton
+                android:id="@+id/radio_button_answer4_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/answer_4_3" />
+
+            <RadioButton
+                android:id="@+id/radio_button_answer4_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/answer_4_4" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/button_send"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/shape_send_button"
+            android:onClick="displayResult"
+            android:text="@string/btn_send"
+            android:textAppearance="@style/ButtonSend"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radio_group_3" />
+
+        <Button
+            android:id="@+id/button_reset"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/shape_reset_button"
+            android:onClick="resetSettings"
+            android:text="@string/btn_reset"
+            android:textAppearance="@style/ButtonReset"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radio_group_3" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

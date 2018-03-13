@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Quiz App</string>
+    <string name="question_1">1. Która firma nie produkuje telefonów?</string>
+    <string name="answer_1_1">Samsung</string>
+    <string name="answer_1_2">Epson</string>
+    <string name="answer_1_3">Xiaomi</string>
+    <string name="answer_1_4">Asus</string>
+
+    <string name="question_2">2. Wybierz dwa najpopularniejsze systemy mobilne.</string>
+    <string name="answer_2_1">Windows Phone</string>
+    <string name="answer_2_2">Android</string>
+    <string name="answer_2_3">iOS</string>
+    <string name="answer_2_4">Symbian</string>
+
+    <string name="question_3">3. Jak się nazywa ostatnia wersja Androida?</string>
+
+    <string name="question_4">4. Którego modelu telefonu nie produkuje firma LG?</string>
+    <string name="answer_4_1">Mi5</string>
+    <string name="answer_4_2">V30</string>
+    <string name="answer_4_3">Q6</string>
+    <string name="answer_4_4">G2</string>
+
+    <string name="btn_send">Wyślij</string>
+    <string name="btn_reset">Zresetuj</string>
+    <string name="edit_text_hint">Twoja odpowiedź</string>
+
+    <string name="you_win">Wszystkie odpowiedzi są prawidłowe. Gratuluję!!!</string>
+    <string name="result">Twój wynik: %1$d/4. Spróbuj ponownie."</string>
+</resources>
