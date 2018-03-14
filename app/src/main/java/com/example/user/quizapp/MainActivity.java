@@ -15,6 +15,10 @@ public class MainActivity extends AppCompatActivity {
     EditText mEditTextAnswer3;
     Button mButtonSend;
     Button mButtonReset;
+    CheckBox mCheckBox1;
+    CheckBox mCheckBox2;
+    CheckBox mCheckBox3;
+    CheckBox mCheckBox4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +28,11 @@ public class MainActivity extends AppCompatActivity {
         // Hide "Reset" button
         mButtonReset = (Button) findViewById(R.id.button_reset);
         mButtonReset.setVisibility(View.GONE);
+
+        mCheckBox1 = (CheckBox) findViewById(R.id.checkbox_answer2_1);
+        mCheckBox2 = (CheckBox) findViewById(R.id.checkbox_answer2_2);
+        mCheckBox3 = (CheckBox) findViewById(R.id.checkbox_answer2_3);
+        mCheckBox4 = (CheckBox) findViewById(R.id.checkbox_answer2_4);
     }
 
     /**
@@ -37,15 +46,13 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // Check the question 2
-        CheckBox checkboxRightAnswer1 = (CheckBox) findViewById(R.id.checkbox_answer2_2);
-        CheckBox checkboxRightAnswer2 = (CheckBox) findViewById(R.id.checkbox_answer2_3);
-        if ((checkboxRightAnswer1.isChecked()) && (checkboxRightAnswer2.isChecked())) {
+        if (!(mCheckBox1.isChecked()) && (mCheckBox2.isChecked()) && (mCheckBox3.isChecked()) && !(mCheckBox4.isChecked())) {
             rightAnswers++;
         }
 
         // Check the question 3
         mEditTextAnswer3 = (EditText) findViewById(R.id.edit_text_answer3);
-        if (mEditTextAnswer3.getText().toString().toLowerCase().equals("oreo")) {
+        if (mEditTextAnswer3.getText().toString().equalsIgnoreCase("oreo")) {
             rightAnswers++;
         }
 
@@ -82,8 +89,12 @@ public class MainActivity extends AppCompatActivity {
         radioGroup1.clearCheck();
         RadioGroup radioGroup2 = (RadioGroup) findViewById(R.id.radio_group_2);
         radioGroup2.clearCheck();
-        RadioGroup radioGroup3 = (RadioGroup) findViewById(R.id.radio_group_3);
-        radioGroup3.clearCheck();
+
+        mCheckBox1.setChecked(false);
+        mCheckBox2.setChecked(false);
+        mCheckBox3.setChecked(false);
+        mCheckBox4.setChecked(false);
+
         mEditTextAnswer3.setText("");
 
         // Show "send" button, hide "reset" button
