@@ -10,29 +10,27 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class MainActivity extends AppCompatActivity {
     int rightAnswers;
     EditText mEditTextAnswer3;
-    Button mButtonSend;
-    Button mButtonReset;
-    CheckBox mCheckBox1;
-    CheckBox mCheckBox2;
-    CheckBox mCheckBox3;
-    CheckBox mCheckBox4;
+    @BindView(R.id.button_send) Button mButtonSend;
+    @BindView(R.id.button_reset) Button mButtonReset;
+    @BindView(R.id.checkbox_answer2_1) CheckBox mCheckBox1;
+    @BindView(R.id.checkbox_answer2_2) CheckBox mCheckBox2;
+    @BindView(R.id.checkbox_answer2_3) CheckBox mCheckBox3;
+    @BindView(R.id.checkbox_answer2_4) CheckBox mCheckBox4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
 
         // Hide "Reset" button
-        mButtonReset = (Button) findViewById(R.id.button_reset);
         mButtonReset.setVisibility(View.GONE);
-
-        mCheckBox1 = (CheckBox) findViewById(R.id.checkbox_answer2_1);
-        mCheckBox2 = (CheckBox) findViewById(R.id.checkbox_answer2_2);
-        mCheckBox3 = (CheckBox) findViewById(R.id.checkbox_answer2_3);
-        mCheckBox4 = (CheckBox) findViewById(R.id.checkbox_answer2_4);
     }
 
     /**
@@ -71,9 +69,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // Show "Reset" button, hide "Send" button
-        mButtonReset = (Button) findViewById(R.id.button_reset);
         mButtonReset.setVisibility(View.VISIBLE);
-        mButtonSend = (Button) findViewById(R.id.button_send);
         mButtonSend.setVisibility(View.GONE);
     }
 
@@ -98,9 +94,7 @@ public class MainActivity extends AppCompatActivity {
         mEditTextAnswer3.setText("");
 
         // Show "send" button, hide "reset" button
-        mButtonSend = (Button) findViewById(R.id.button_send);
         mButtonSend.setVisibility(View.VISIBLE);
-        mButtonReset = (Button) findViewById(R.id.button_reset);
         mButtonReset.setVisibility(View.GONE);
     }
 }
